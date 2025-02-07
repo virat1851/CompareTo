@@ -1,0 +1,25 @@
+class Name implements Comparator<Pair> {
+    @Override
+    public int compare(Pair p1, Pair p2) {
+        return Integer.compare(p1.finish, p2.finish); //Double Float
+        return p1.finish - p2.finish;
+    }
+}
+
+
+
+
+
+intervals.sort(Comparator.comparingInt(p -> p.finish));
+Collections.sort(intervals,new FinishTimeComparator());
+intervals.sort(new FinishTimeComparator());
+
+
+
+Arrays.sort(items, new Comparator<Item>() {
+            @Override
+            public int compare(Item o1, Item o2) {
+                return Double.compare(o2.valuePerWeight(), o1.valuePerWeight());
+                return o2.valuePerWeight()- o1.valuePerWeight();
+            }
+        });
